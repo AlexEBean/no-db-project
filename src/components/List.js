@@ -46,10 +46,16 @@ class List extends Component {
         )
 
         return (
-                <ul className = "list"
+                
+          <div className = "column">
+            <h1 className = "title"
+            > 
+              Where You Can Go </h1>
+            <ul className = "list"
                 >
                   {mappedList}
                 </ul>
+          </div>
         )
     }
 }

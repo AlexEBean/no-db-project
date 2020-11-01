@@ -4,21 +4,27 @@ import React from 'react'
 const Remove = (props) => {
     const {wishlist, index} = props
   return (
-    <ul className = "row">
-       <p
-        onClick = { () => {
+    <div>
+      <ul className = "row">
+        <p
+          className = "place"
+          onClick = { () => {
             props.addToLog(index)
-        }}
-       >
+          }}
+        >
            {wishlist.name}
         </p>
-       <p
-        onClick = { () => {
-            props.removeFromWishlist(index)
-        }} 
-       >
-       X </p>
-    </ul>
+        <h4
+          className = "x"
+          onClick = { () => {
+              props.removeFromWishlist(index)
+          }} 
+        >
+          x 
+        </h4>
+      </ul>
+      <hr/>
+    </div>
   )
 }
 

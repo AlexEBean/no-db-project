@@ -55,11 +55,15 @@ class Wishlist extends Component {
         )
         
         return (
-                <ul className = "list"
-                >
-                    {mappedWishlist}
-                </ul>
-            
+          <div className = "column">
+            <h1 className = "title"
+            > 
+              Where You Want to go </h1>
+            <ul className = "list" id = "addedList"
+              >
+                {mappedWishlist}
+            </ul>
+          </div>          
         )
     }
 }

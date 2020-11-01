@@ -53,10 +53,16 @@ class Log extends Component {
         )
         
         return (
-                <ul className = "list"
-                >
-                    {mappedLog}
-                </ul>    
+          <div className = "column">
+            <h1 className = "title"
+            > 
+              Where You've Been </h1>
+            <ul className = "list" id = "addedList"
+              >
+                  {mappedLog}
+              </ul>    
+          </div>
+                
         )
     }
 }

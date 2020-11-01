@@ -27,19 +27,19 @@ class Edit extends Component {
       <ul>
          <p 
           className = "row"
-  
-     
          >
            {log.name}
-          <p
+          <h4
+          className = "x"
           onClick = { () => {
             this.props.removeFromLog(index)
           }} 
-         > X </p>
+         > x </h4>
          </p>
         <div className = "row">
           {this.state.toggleEdit ? (
             <input
+              className = "inputBar"
               value = {input}
               onChange = {this.handleChange}
             />
@@ -49,6 +49,7 @@ class Edit extends Component {
         
           {this.state.toggleEdit ? (
             <button
+              className = "buttons"
               onClick = { () => {
                 this.props.updateTimesVisited(index, input)
                 this.toggleEdit()
@@ -58,15 +59,16 @@ class Edit extends Component {
             </button>)
         
             : (<button 
-            onClick = { () => {
-              this.toggleEdit()
-            }}
-          >
+                className = "buttons"
+                onClick = { () => {
+                this.toggleEdit()
+              }}
+            >
             Adjust
           </button>
           )}
         </div>
-    
+        <hr/>
       </ul>
     )
   }
