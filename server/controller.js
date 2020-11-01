@@ -1,7 +1,7 @@
 const placeList = require("./list.json")
 let wishlist = []
 let log = []
-let nextWishlistId = 1
+let wishlistId = 1
 let logId = 1
 
 module.exports = {
@@ -17,11 +17,11 @@ module.exports = {
     addToWishlist: (req, res) => {
         const {index} = req.params
         const newWishlistItem = {
-            id: nextWishlistId,
+            id: wishlistId,
         }
         newWishlistItem.name = placeList[index].name
 
-        nextWishlistId++
+        wishlistId++
         // placeList.splice(index, 1)
         wishlist.push(newWishlistItem)
         res.status(200).send(wishlist)
