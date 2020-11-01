@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+header {
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-family: "Raleway";
+}
+
+main {
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.list {
+    width: 25vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 24px;
+    background-color: aqua;
+}
+
+.row {
+    width: 16vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: green;
+}

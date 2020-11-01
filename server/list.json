@@ -1,0 +1,71 @@
+[
+    {
+        "id": 1,
+        "name": "Great Pyramid of Giza"
+    },
+    
+    {
+        "id": 2,
+        "name": "Great Wall of China"
+    },
+    
+    {
+        "id": 3,
+        "name": "Leaning Tower of Pisa"
+    },
+    
+    {
+        "id": 4,
+        "name": "Stonehenge"
+    },
+    
+    {
+        "id": 5,
+        "name": "Taj Mahal"
+    },
+    
+    {
+        "id": 6,
+        "name": "Empire State Building"
+    },
+    
+    {
+        "id": 7,
+        "name": "Golden Gate Bridge"
+    },
+    
+    {
+        "id": 8,
+        "name": "Grand Canyon"
+    },
+    
+    {
+        "id": 9,
+        "name": "Great Barrier Reef"
+    },
+    
+    {
+        "id": 10,
+        "name": "Mount Everest"
+    },
+    
+    {
+        "id": 11,
+        "name": "Machu Picchu"
+    },
+    
+    {
+        "id": 12,
+        "name": "Amazon rainforest"
+    },
+    
+    {
+        "id": 13,
+        "name": "Niagra Falls"
+    },
+    
+    {
+        "id": 14,
+        "name": "Mount Fuji"
+    }
+]
