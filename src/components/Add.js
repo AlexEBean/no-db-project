@@ -8,9 +8,6 @@ const Add = (props) => {
        <div className = "row">
         <p
             className = "place"
-            onClick = { () => {
-              props.addToWishlist(index)
-            }}
         >
             {props.placeList.name}
         </p>
@@ -23,6 +20,14 @@ const Add = (props) => {
             x 
         </h4>
       </div>
+      <button
+        className = "buttons"
+        onClick = { () => {
+          props.addToWishlist(index)
+        }}
+      >
+        Add to Where You Want To Go
+      </button>
       <hr/>
     </ul>
   )

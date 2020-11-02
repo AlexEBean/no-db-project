@@ -8,9 +8,6 @@ const Remove = (props) => {
       <ul className = "row">
         <p
           className = "place"
-          onClick = { () => {
-            props.addToLog(index)
-          }}
         >
            {wishlist.name}
         </p>
@@ -23,6 +20,14 @@ const Remove = (props) => {
           x 
         </h4>
       </ul>
+      <button
+        className = "buttons"
+        onClick = { () => {
+          props.addToLog(index)
+        }}
+      >
+        Add to Where You've Been
+      </button>
       <hr/>
     </div>
   )

@@ -64,10 +64,6 @@ main {
     width: 10vw;
 }
 
-.place:hover {
-    color: blue;
-}
-
 .row {
     width: 16vw;
     height: 4vh;
