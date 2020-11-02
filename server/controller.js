@@ -1,13 +1,33 @@
-const placeList = require("./list.json")
+const list = require("./list.json")
 let wishlist = []
 let log = []
+let listId = 15
 let wishlistId = 1
 let logId = 1
 
 module.exports = {
 
     getList: (req, res) => {
-        res.status(200).send(placeList)
+        res.status(200).send(list)
+    }, 
+
+    addToList: (req, res) => {
+        const {name} = req.body
+        const newListItem = {
+            id: listId
+        }
+        newListItem.name = name
+        listId++
+
+        list.push(newListItem)
+        res.status(200).send(list)
+    },
+
+    removeFromList: (req, res) => {
+        const {index} = req.params
+
+        list.splice(index, 1)
+        res.status(200).send(list)
     },
 
     getWishlist: (req, res) => {
@@ -19,10 +39,11 @@ module.exports = {
         const newWishlistItem = {
             id: wishlistId,
         }
-        newWishlistItem.name = placeList[index].name
+        
+        newWishlistItem.name = list[index].name
 
         wishlistId++
-        // placeList.splice(index, 1)
+        list.splice(index, 1)
         wishlist.push(newWishlistItem)
         res.status(200).send(wishlist)
     },
@@ -30,7 +51,7 @@ module.exports = {
     removeFromWishlist: (req, res) => {
         const {index} = req.params
 
-        // placeList.push(wishlist[index])
+        list.push(wishlist[index])
         wishlist.splice(index, 1)
         res.status(200).send(wishlist)
     },

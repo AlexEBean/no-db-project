@@ -59,7 +59,7 @@ class Wishlist extends Component {
             <h1 className = "title"
             > 
               Where You Want to go </h1>
-            <ul className = "list" id = "addedList"
+            <ul className = "list"
               >
                 {mappedWishlist}
             </ul>

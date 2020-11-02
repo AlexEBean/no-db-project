@@ -57,7 +57,7 @@ class Log extends Component {
             <h1 className = "title"
             > 
               Where You've Been </h1>
-            <ul className = "list" id = "addedList"
+            <ul className = "list"
               >
                   {mappedLog}
               </ul>    

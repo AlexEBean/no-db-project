@@ -39,7 +39,7 @@ class Edit extends Component {
         <div className = "row">
           {this.state.toggleEdit ? (
             <input
-              className = "inputBar"
+              className = "visitedInputBar"
               value = {input}
               onChange = {this.handleChange}
             />
