@@ -8,15 +8,14 @@ class Edit extends Component {
       toggleEdit: false,
       input: props.log.visited
     }
-    this.handleChange = this.handleChange.bind(this)
-    this.toggleEdit = this.toggleEdit.bind(this)
   }
 
-  handleChange (event) {
+  handleChange = (event) => {
     this.setState({ input: event.target.value })
+    
   }
 
-  toggleEdit () {
+  toggleEdit = () => {
     this.setState({ toggleEdit: !this.state.toggleEdit });
   }
 
@@ -52,8 +51,11 @@ class Edit extends Component {
               className = "buttons"
               onClick = { () => {
                 this.props.updateTimesVisited(index, input)
+                log.visited = input
                 this.toggleEdit()
+                
               }}
+              
             >
               Update
             </button>)

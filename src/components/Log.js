@@ -7,7 +7,8 @@ class Log extends Component {
     constructor(){
         super()
         this.state = {
-            displayLog: []
+            displayLog: [],
+            visited: 1
         }
     }
 
@@ -21,7 +22,7 @@ class Log extends Component {
         .catch((err) => console.log(err))
       }
 
-    updateTimesVisited(index, visited){
+    updateTimesVisited = (index, visited) => {
         axios.put(`/api/log/${index}`, {visited})
         .then((res) => {
           this.setState({
@@ -31,7 +32,7 @@ class Log extends Component {
         .catch((err) => console.log(err))
     }    
 
-    removeFromLog(index){
+    removeFromLog = (index) => {
         axios.delete(`/api/log/${index}`)
         .then((res) => {
           this.setState({
@@ -43,12 +44,13 @@ class Log extends Component {
       
     render() {
         let mappedLog = []
-        mappedLog = this.state.displayLog.map((log) => 
+        mappedLog = this.state.displayLog.map((log, index) => 
             <Edit
             key = {log.id}
             log = {log}
             updateTimesVisited = {this.updateTimesVisited}
             removeFromLog = {this.removeFromLog}
+            index = {index}
             />
         )
         

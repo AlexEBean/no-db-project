@@ -34,7 +34,7 @@ class List extends Component {
         .catch((err) => console.log(err))
       }
 
-    addToList(name) {
+    addToList = (name) => {
       axios.post(`/api/list/`, {name})
       .then((res) => {
         this.setState({
@@ -44,7 +44,7 @@ class List extends Component {
       .catch((err) => console.log(err))
     }
 
-    removeFromList(index){
+    removeFromList = (index) => {
       axios.delete(`/api/list/${index}`)
       .then((res) => {
         this.setState({
@@ -54,7 +54,7 @@ class List extends Component {
       .catch((err) => console.log(err))
   }
 
-    addToWishlist(index) {
+    addToWishlist = (index) => {
         axios.post(`/api/wishlist/${index}`)
         .then((res) => {
           this.setState({

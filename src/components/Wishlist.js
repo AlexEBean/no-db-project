@@ -22,7 +22,7 @@ class Wishlist extends Component {
         .catch((err) => console.log(err))
       }
 
-    addToLog(index) {
+    addToLog = (index) => {
         axios.post(`/api/log/${index}`)
         .then((res) => {
           this.setState({
@@ -32,7 +32,7 @@ class Wishlist extends Component {
         .catch((err) => console.log(err))
     }
 
-    removeFromWishlist(index){
+    removeFromWishlist = (index) => {
         axios.delete(`/api/wishlist/${index}`)
         .then((res) => {
           this.setState({
