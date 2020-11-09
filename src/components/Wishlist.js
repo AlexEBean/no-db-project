@@ -58,7 +58,7 @@ class Wishlist extends Component {
           <div className = "column">
             <h1 className = "title"
             > 
-              Where You Want to go </h1>
+              Where You Want To Go</h1>
             <ul className = "list"
               >
                 {mappedWishlist}

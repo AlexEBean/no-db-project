@@ -67,10 +67,10 @@ class List extends Component {
     render() {
         let mappedList = []
         const {input} = this.state
-        mappedList = this.state.displayList.map((placeList, index) => 
+        mappedList = this.state.displayList.map((list, index) => 
             <Add
-            key = {placeList.id}
-            placeList = {placeList}
+            key = {list.id}
+            list = {list}
             removeFromList = {this.removeFromList}
             addToWishlist = {this.addToWishlist}
             index = {index}

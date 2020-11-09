@@ -9,7 +9,7 @@ const Add = (props) => {
         <p
             className = "place"
         >
-            {props.placeList.name}
+            {props.list.name}
         </p>
         <h4
             className = "x"

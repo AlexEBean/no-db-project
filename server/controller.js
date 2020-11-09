@@ -9,7 +9,7 @@ module.exports = {
 
     getList: (req, res) => {
         res.status(200).send(list)
-    }, 
+    },
 
     addToList: (req, res) => {
         const {name} = req.body
@@ -37,7 +37,7 @@ module.exports = {
     addToWishlist: (req, res) => {
         const {index} = req.params
         const newWishlistItem = {
-            id: wishlistId,
+            id: wishlistId
         }
         
         newWishlistItem.name = list[index].name
@@ -63,7 +63,7 @@ module.exports = {
     addToLog: (req, res) => {
         const {index} = req.params
         const newLogEntry = {
-            id: logId,
+            id: logId
         }
         newLogEntry.name = wishlist[index].name
         newLogEntry.visited = 1
@@ -84,8 +84,7 @@ module.exports = {
 
     removeFromLog: (req, res) => {
         const {index} = req.params
-        // wishlist.push(log[index])  
-        // This doesn't work like in removeFromWishlist. Might be the added visited property
+        wishlist.push(log[index])  
         log.splice(index, 1)
         res.status(200).send(log)
     }
